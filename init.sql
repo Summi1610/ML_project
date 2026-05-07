@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS house_db;
+USE house_db;
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    contact VARCHAR(20)
+);

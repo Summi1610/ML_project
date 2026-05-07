@@ -5,11 +5,13 @@ import pandas as pd
 import mysql.connector
 
 # DB connection
+import os
+
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="house_db"
+    host=os.environ.get("DB_HOST", "mysql-db"),
+    user=os.environ.get("DB_USER", "root"),
+    password=os.environ.get("DB_PASSWORD", "root"),
+    database=os.environ.get("DB_NAME", "house_db")
 )
 cursor = db.cursor()
 
